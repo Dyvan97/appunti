@@ -1,0 +1,2 @@
+# appunti
+hacking cheet sheet
