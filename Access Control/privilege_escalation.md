@@ -34,5 +34,9 @@ cd /home/flag
 ./get_flag
 ```
 
+## tools
+- [linpeas](https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS) --> enumerazione per privilege escalation 
+- [pspy](https://github.com/DominicBreuker/pspy) --> enumera tutti i processi attivi sul sistema
+
 
 
