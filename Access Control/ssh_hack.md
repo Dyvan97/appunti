@@ -27,3 +27,8 @@ host (incollare `./priv_key`):
 ssh -i priv_key <IP>
 ```
 
+## port forwarding
+
+```
+ssh -L <LPORT>:127.0.0.1:<RPORT> -N <HOST>@<IP>
+```
