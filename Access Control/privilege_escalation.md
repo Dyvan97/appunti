@@ -20,6 +20,11 @@ trovare tutti i file setuid
 find / -perm -u=s -type f 2>/dev/null
 ```
 
+setuid eseguibili da un gruppo (o utente)
+```
+find / -perm -u=s -group <ID> 2>/dev/null
+```
+
 cercare file in https://gtfobins.github.io/gtfobins/
 
 se il file esegue un altro programma modificare il path e creare un programma locale con lo stesso nome che fa altro.
