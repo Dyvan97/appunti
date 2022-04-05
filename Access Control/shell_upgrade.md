@@ -4,7 +4,7 @@
 
 vittima:
 ```
-SHELL=/bin/bash script -q /dev/null
+SHELL=/bin/bash script -q /dev/null       #or script /dev/null -c bash
 Ctrl-Z
 echo $TERM
 stty -a
